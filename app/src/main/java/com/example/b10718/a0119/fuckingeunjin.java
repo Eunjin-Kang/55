@@ -9,8 +9,5 @@ import android.widget.EditText;
  */
 
 public class fuckingeunjin {
-    private EditText editTextEmail;
-    private EditText editTextPassword;
-    private AppCompatButton buttonLogin;
-    private ProgressDialog progressDialog;
+
 }
