@@ -39,11 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText editTextPassword;
     private AppCompatButton buttonLogin;
     private ProgressDialog progressDialog;
-    private Button btn;
 
-//    public static final String LOGIN_URL = "http://192.168.0.3/v1/login.php";
-    public static final String KEY_EMAIL = "email";
-    public static final String KEY_PASSWORD = "password";
 
     //boolean variable to check user is logged in or not
     //initially it is false
