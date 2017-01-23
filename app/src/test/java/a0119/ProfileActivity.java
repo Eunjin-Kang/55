@@ -1,57 +1,68 @@
-package com.example.b10718.a0119;
-
-/**
- * Created by B10718 on 2017-01-19.
- */
+package a0119;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import com.example.b10718.a0119.R;
 
 public class ProfileActivity extends ActionBarActivity {
 
     //Textview to show currently logged in user
     //private TextView textView;
+/*
+    String[] menuItems = new String[]{"USER", "CAM", "GPS", "FEED"};
+
+    ListView lvNavList;
+    FrameLayout flContainer;
 
     DrawerLayout dlDrawer;
     ActionBarDrawerToggle dtToggle;
+*/
 
-    ListView lvDrawerList;
-    ArrayAdapter<String> adtDrawerList;
-    String[] menuItems = new String[]{"USER", "CAM", "GPS", "FEED"};
+    ListView mDrawerList;
+    ArrayAdapter<String> mAdapter;
 
-
-
-
+    FeedActivity feedActivity;
+    GpsActivity gpsActivity;
+    CamActivity camActivity;
+    UserActivity userActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        mDrawerList = (ListView)findViewById(R.id.navList);
+
+        feedActivity = FeedActivity.newInstance();
+        gpsActivity = GpsActivity.newInstance();
+        camActivity = CamActivity.newInstance();
+        userActivity = UserActivity.newInstance();
+
 /*        //Initializing textview
         textView = (TextView) findViewById(R.id.textView);
 
-        //Fetching email from shared preferences
+        //Fetching email from shared preferences//
         SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         String email = sharedPreferences.getString(Config.EMAIL_SHARED_PREF,"Not Available");
 
         //Showing the current logged in email to textview
         textView.setText("Current User: " + email);*/
+
+
+
     }
+
+
 
     //Logout function
     private void logout(){

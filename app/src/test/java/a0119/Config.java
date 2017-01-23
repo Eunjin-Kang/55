@@ -1,4 +1,4 @@
-package com.example.b10718.a0119;
+package a0119;
 
 /**
  * Created by B10718 on 2017-01-19.

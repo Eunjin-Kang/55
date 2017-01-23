@@ -1,20 +1,17 @@
-package com.example.b10718.a0119;
+package a0119;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.SharedPreferences;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -23,14 +20,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.b10718.a0119.R;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static android.app.WallpaperManager.getInstance;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,7 +32,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText editTextPassword;
     private AppCompatButton buttonLogin;
     private ProgressDialog progressDialog;
+    private Button btn;
 
+//    public static final String LOGIN_URL = "http://192.168.0.3/v1/login.php";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_PASSWORD = "password";
 
     //boolean variable to check user is logged in or not
     //initially it is false

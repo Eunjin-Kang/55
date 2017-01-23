@@ -1,4 +1,4 @@
-package com.example.b10718.a0119;
+package a0119;
 
 
 import android.app.Activity;
@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.b10718.a0119.R;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
-
 
 
 public class RegisterActivity extends Activity {
